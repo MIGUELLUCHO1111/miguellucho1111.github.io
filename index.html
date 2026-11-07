@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Luis Miguel Guerra · Portafolio">
+<meta property="og:description" content="Ingeniero de Petróleo y de Sistemas. Aplicaciones y automatizaciones para la industria petrolera, construidas dirigiendo IA.">
+<meta property="og:image" content="https://miguellucho1111.github.io/assets/trakon-panel.jpg">
+<meta property="og:image:width" content="1440">
+<meta property="og:image:height" content="900">
+<meta property="og:url" content="https://miguellucho1111.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<title>Luis Miguel Guerra · Portafolio</title>
+<meta name="description" content="Ingeniero de Petróleo y de Sistemas. Construyo aplicaciones y automatizaciones para operaciones industriales dirigiendo inteligencia artificial.">
+<script>try{var t=localStorage.getItem('tema')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=Chakra+Petch:wght@500;600&display=swap">
+<style>
+:root{--bg:#0B0D10;--grid:rgba(255,255,255,.035);--panel:#14171C;--panel2:#1B1F26;--line:#2A303A;--ink:#EEF0F3;--muted:#949EAC;--y:#FFC20E;--y-ink:#FFC20E;--y-soft:rgba(255,194,14,.12);--green:#34D399;--cyan:#38BDF8;--violet:#A78BFA;--red:#F43F5E;--shadow:0 14px 34px rgba(0,0,0,.4);--top:rgba(11,13,16,.82);--f-d:'Barlow Condensed',sans-serif;--f-b:'Barlow','Segoe UI',sans-serif;--f-n:'Chakra Petch',monospace;--stripe:repeating-linear-gradient(-45deg,#FFC20E 0 10px,#141414 10px 20px);color-scheme:dark}
+:root[data-theme="light"]{--bg:#ECEAE4;--grid:rgba(20,20,20,.05);--panel:#FFFFFF;--panel2:#F5F3EE;--line:#D8D3C6;--ink:#16181B;--muted:#5C646E;--y-ink:#8A6100;--y-soft:rgba(255,194,14,.2);--green:#047857;--cyan:#0369A1;--violet:#6D28D9;--red:#DC2626;--shadow:0 10px 26px rgba(40,34,20,.1);--top:rgba(236,234,228,.86);color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background-color:var(--bg);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:34px 34px;color:var(--ink);font-family:var(--f-b);font-size:16px;line-height:1.55}
+a{color:var(--y-ink)}
+img{max-width:100%;display:block}
+button{font:inherit;cursor:pointer;color:inherit}
+svg.i{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wrap{width:min(1180px,100% - 32px);margin:0 auto}
+.num{font-family:var(--f-n)}
+/* Barra superior */
+.top{position:sticky;top:0;z-index:50;background:var(--top);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.top:after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:4px;background:var(--stripe);opacity:.9}
+.top .wrap{display:flex;align-items:center;gap:16px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.mono{width:40px;height:40px;border-radius:10px;background:#FFC20E;color:#141414;display:grid;place-items:center;font-family:var(--f-d);font-weight:800;font-size:20px;letter-spacing:.02em;box-shadow:0 0 0 3px rgba(255,194,14,.18),0 0 22px rgba(255,194,14,.35)}
+.brand b{font-family:var(--f-d);font-size:20px;letter-spacing:.06em;text-transform:uppercase;line-height:1}
+.brand small{display:block;color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-family:var(--f-d);font-weight:600}
+nav.links{margin-left:auto;display:flex;gap:4px}
+nav.links a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px;transition:.15s}
+nav.links a:hover,nav.links a.on{color:var(--ink);background:var(--y-soft)}
+.icon-btn{width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--line);background:var(--panel);border-radius:10px}
+.icon-btn:hover{border-color:var(--y);color:var(--y-ink)}
+.menu{display:none}
+/* Botones */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font-weight:700;text-decoration:none;transition:transform .15s,border-color .15s}
+.btn:hover{border-color:var(--y);transform:translateY(-2px)}
+.btn.pri{background:#FFC20E;border-color:#FFC20E;color:#141414;box-shadow:0 8px 22px rgba(255,194,14,.3)}
+.btn.sm{padding:8px 12px;font-size:14px}
+/* Portada */
+.hero{padding:64px 0 40px;position:relative}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:5px 12px;border-radius:99px;border:1px solid color-mix(in srgb,var(--green) 45%,transparent);color:var(--green);background:color-mix(in srgb,var(--green) 10%,transparent);font-family:var(--f-d);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:currentColor;animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,currentColor 70%,transparent)}70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.hero h1{font-family:var(--f-d);font-size:clamp(40px,6vw,72px);font-weight:800;line-height:.95;margin:16px 0 10px;text-transform:uppercase;letter-spacing:.01em}
+.hero h1 .y{color:var(--y-ink)}
+.hero .rol{font-family:var(--f-d);font-size:clamp(20px,2.4vw,26px);font-weight:700;letter-spacing:.04em;margin:0 0 14px}
+.rot{color:var(--y-ink);display:inline-block;min-width:10ch;border-right:3px solid var(--y);padding-right:4px;animation:caret 1s step-end infinite}
+@keyframes caret{50%{border-color:transparent}}
+.hero p.lead{color:var(--muted);font-size:18px;max-width:600px;margin:0 0 22px}
+.hero p.lead b{color:var(--ink)}
+.ctas{display:flex;gap:10px;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:28px}
+.stat{border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:12px 14px;position:relative;overflow:hidden}
+.stat:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--c,var(--y))}
+.stat b{display:block;font-family:var(--f-n);font-size:28px;line-height:1.1}
+.stat small{color:var(--muted);font-size:13px;line-height:1.25;display:block}
+/* Consola animada: de la instrucción a la aplicación */
+.console{background:#0D1014;border:1px solid #262C35;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);color:#E5E7EB;position:relative}
+.console .bar{display:flex;align-items:center;gap:7px;padding:11px 14px;background:#151920;border-bottom:1px solid #262C35}
+.console .bar i{width:11px;height:11px;border-radius:50%;background:#3A414C}
+.console .bar i:nth-child(1){background:#F43F5E}.console .bar i:nth-child(2){background:#FFC20E}.console .bar i:nth-child(3){background:#34D399}
+.console .bar span{margin-left:8px;color:#8E98A6;font-family:var(--f-n);font-size:12.5px}
+.console .body{padding:16px;font-family:var(--f-n);font-size:13.5px;min-height:330px;line-height:1.65}
+.console .who{color:#FFC20E}
+.console .ia{color:#38BDF8}
+.console .ok{color:#34D399}
+.console .dim{color:#7D8693}
+.console .cur{display:inline-block;width:8px;height:15px;background:#FFC20E;vertical-align:-2px;animation:caret 1s step-end infinite}
+.console .prog{height:6px;border-radius:9px;background:#232830;overflow:hidden;margin:6px 0}
+.console .prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,#FFC20E,#F29A00);transition:width .5s}
+/* Secciones */
+section.s{padding:56px 0}
+.sh{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.sh .k{font-family:var(--f-d);color:var(--y-ink);letter-spacing:.2em;text-transform:uppercase;font-weight:700;font-size:13px}
+.sh h2{font-family:var(--f-d);font-size:clamp(30px,4vw,44px);font-weight:800;text-transform:uppercase;margin:4px 0 0;line-height:1}
+.sh p{color:var(--muted);margin:8px 0 0;max-width:640px}
+/* Demos destacadas */
+.demo{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:26px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow);position:relative;overflow:hidden;margin-bottom:22px}
+.demo:before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--stripe)}
+.demo.rev{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr)}
+.demo.rev .shots{order:2}
+.shots{display:grid;gap:10px;min-width:0}
+.shot{border-radius:12px;overflow:hidden;border:1px solid var(--line);position:relative;aspect-ratio:16/10;background:#0D1014;cursor:zoom-in}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top left;transition:opacity .35s,transform .6s}
+.shot:hover img{transform:scale(1.02)}
+.shot .lbl{position:absolute;left:10px;bottom:10px;background:rgba(20,20,20,.85);color:#FFC20E;font-family:var(--f-d);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12.5px;padding:4px 9px;border-radius:6px}
+.thumbs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
+.thumbs button{padding:0;border:2px solid transparent;border-radius:7px;overflow:hidden;aspect-ratio:16/10;background:#0D1014;opacity:.6;transition:.15s}
+.thumbs button img{width:100%;height:100%;object-fit:cover;object-position:top left}
+.thumbs button.on,.thumbs button:hover{border-color:#FFC20E;opacity:1}
+.dtx .tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-d);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12.5px;color:var(--y-ink)}
+.dtx h3{font-family:var(--f-d);font-size:42px;font-weight:800;margin:4px 0 2px;letter-spacing:.06em;line-height:1}
+.dtx h3 small{display:block;font-size:16px;letter-spacing:.2em;color:var(--muted);margin-top:4px}
+.dtx p{color:var(--muted)}
+.feat{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px}
+.feat li{display:flex;gap:9px;align-items:flex-start}
+.feat li svg.i{color:var(--green);margin-top:3px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
+.chip{font-size:12.5px;font-weight:700;padding:3px 9px;border-radius:6px;background:var(--panel2);border:1px solid var(--line);color:var(--muted)}
+.roi{display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:10px;background:color-mix(in srgb,var(--green) 10%,transparent);border:1px solid color-mix(in srgb,var(--green) 35%,transparent);margin:0 0 16px;font-size:14.5px}
+.roi svg.i{color:var(--green)}
+/* Proyectos */
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.fbtn{border:1px solid var(--line);background:var(--panel);border-radius:99px;padding:7px 13px;font-weight:600;font-size:14px}
+.fbtn.on{background:#FFC20E;border-color:#FFC20E;color:#141414}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px;transition:transform .2s,border-color .2s;position:relative}
+.card:hover{transform:translateY(-4px);border-color:var(--y)}
+.card .ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#FFD84D,#F5A800);color:#141414}
+.card .ic svg.i{width:24px;height:24px}
+.card h3{font-family:var(--f-d);font-size:22px;margin:0;text-transform:uppercase;letter-spacing:.03em;line-height:1.05}
+.card p{margin:0;color:var(--muted);font-size:15px;flex:1}
+.card .st{position:absolute;top:16px;right:16px}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:800;padding:3px 9px;border-radius:99px;letter-spacing:.02em}
+.badge.pub{background:color-mix(in srgb,var(--green) 15%,transparent);color:var(--green)}
+.badge.demo{background:color-mix(in srgb,var(--y) 22%,transparent);color:var(--y-ink)}
+.badge.prox{background:color-mix(in srgb,var(--cyan) 15%,transparent);color:var(--cyan)}
+.badge.priv{background:var(--panel2);color:var(--muted);border:1px solid var(--line)}
+.card .lk{display:flex;gap:8px;flex-wrap:wrap}
+.card.hide{display:none}
+/* Cómo trabajo */
+.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;counter-reset:n}
+.step{background:var(--panel);border:1px solid var(--line);border-top:4px solid #FFC20E;border-radius:14px;padding:18px;position:relative;transition:transform .2s}
+.step:hover{transform:translateY(-4px)}
+.step .n{font-family:var(--f-n);font-size:34px;color:var(--y-ink);line-height:1}
+.step h3{font-family:var(--f-d);font-size:22px;text-transform:uppercase;margin:6px 0}
+.step p{margin:0;color:var(--muted);font-size:15px}
+.step .who{display:inline-block;margin-top:10px;font-size:12px;font-weight:800;padding:2px 8px;border-radius:5px}
+.step .who.yo{background:var(--y-soft);color:var(--y-ink)}
+.step .who.ia{background:color-mix(in srgb,var(--cyan) 15%,transparent);color:var(--cyan)}
+.honest{margin-top:16px;display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:14px;border:1px dashed var(--y);background:var(--y-soft)}
+.honest svg.i{color:var(--y-ink);width:22px;height:22px;margin-top:2px}
+/* Experiencia */
+.two{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:22px;align-items:start}
+.tl{position:relative;padding-left:26px;display:grid;gap:14px}
+.tl:before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.ti{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.ti:before{content:"";position:absolute;left:-24px;top:18px;width:14px;height:14px;border-radius:3px;background:#FFC20E;transform:rotate(45deg);box-shadow:0 0 0 4px var(--bg)}
+.ti.now:before{background:var(--green);animation:pulse 1.6s infinite;color:var(--green)}
+.ti b{font-family:var(--f-d);font-size:20px;text-transform:uppercase;letter-spacing:.03em;display:block;line-height:1.1}
+.ti .meta{color:var(--muted);font-size:14px;margin:2px 0 6px}
+.ti p{margin:0;font-size:15px}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+.box h3{font-family:var(--f-d);font-size:20px;text-transform:uppercase;letter-spacing:.06em;margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.box h3 svg.i{color:var(--y-ink)}
+.box + .box{margin-top:14px}
+.sk{display:flex;flex-wrap:wrap;gap:6px}
+.sk span{padding:5px 10px;border-radius:8px;font-size:14px;font-weight:600;border:1px solid var(--line);background:var(--panel2)}
+.sk.dom span{border-color:color-mix(in srgb,var(--green) 40%,var(--line))}
+.sk.form span{border-style:dashed}
+.edu{display:grid;gap:8px}
+.edu div{display:flex;gap:10px;align-items:center}
+.edu svg.i{color:var(--y-ink)}
+/* Contacto */
+.cta{background:linear-gradient(125deg,#0E1115 0%,#1A1E24 52%,#2A2208 100%);color:#F3F4F6;border:1px solid #2B313B;border-radius:22px;padding:34px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.cta:before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:var(--stripe)}
+.cta:after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,194,14,.25),transparent 65%);right:-120px;top:-160px;pointer-events:none}
+.cta h2{font-family:var(--f-d);font-size:clamp(30px,4vw,46px);text-transform:uppercase;margin:0 0 8px;line-height:1}
+.cta p{color:#B8C0CC;max-width:640px}
+.cta .btn{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.16);color:#F3F4F6}
+.cta .btn.pri{background:#FFC20E;color:#141414;border-color:#FFC20E}
+footer{padding:30px 0 50px;color:var(--muted);font-size:14px;text-align:center}
+/* Visor de capturas */
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:100;display:grid;place-items:center;padding:20px}
+.lb[hidden]{display:none}
+.lb img{max-height:86vh;border-radius:12px;border:1px solid #333}
+.lb button{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:10px;border:1px solid #444;background:#141414;color:#fff}
+/* Aparición al hacer scroll */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+@media (max-width:980px){.hero .wrap,.demo,.demo.rev,.two{grid-template-columns:minmax(0,1fr)}.demo.rev .shots{order:0}.flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){nav.links{display:none;position:absolute;top:68px;left:16px;right:16px;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px;box-shadow:var(--shadow)}nav.links.open{display:flex}.menu{display:grid;margin-left:auto}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.thumbs{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{padding-top:36px}.console .body{min-height:290px;font-size:12.5px}.dtx h3{font-size:34px}.cta{padding:24px 18px}}
+@media (max-width:520px){.flow{grid-template-columns:minmax(0,1fr)}.demo{padding:16px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#inicio"><span class="mono">LG</span><span><b>Luis Miguel Guerra</b><small>Petróleo · Sistemas · IA</small></span></a>
+  <nav class="links" id="links"><a href="#demos">Demos</a><a href="#proyectos">Proyectos</a><a href="#metodo">Cómo trabajo</a><a href="#experiencia">Experiencia</a><a href="#contacto">Contacto</a></nav>
+  <button class="icon-btn" id="tema" aria-label="Cambiar tema"></button>
+  <button class="icon-btn menu" id="menu" aria-label="Abrir menú"></button>
+</div></header>
+
+<main id="inicio">
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="eyebrow"><i></i> Disponible · remoto o en campo</span>
+    <h1>Luis Miguel<br><span class="y">Guerra</span></h1>
+    <p class="rol">Ingeniero de Petróleo y de Sistemas · <span class="rot" id="rot">Flota y GPS</span></p>
+    <p class="lead">Construyo <b>aplicaciones y automatizaciones para operaciones industriales</b> dirigiendo inteligencia artificial. Yo defino el problema, diseño la solución, doy las instrucciones y valido cada entrega; <b>la IA escribe el código</b>.</p>
+    <div class="ctas"><a class="btn pri" href="#demos">Ver las demos</a><a class="btn" href="https://www.linkedin.com/in/miguellucho" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/MIGUELLUCHO1111" target="_blank" rel="noopener">GitHub</a></div>
+    <div class="stats">
+      <div class="stat" style="--c:#FFC20E"><b class="num" data-n="6">0</b><small>años de experiencia en TI y operaciones</small></div>
+      <div class="stat" style="--c:#38BDF8"><b class="num" data-n="43">0</b><small>pantallas en las 2 demos industriales</small></div>
+      <div class="stat" style="--c:#34D399"><b class="num" data-n="10">0</b><small>proyectos construidos dirigiendo IA</small></div>
+      <div class="stat" style="--c:#A78BFA"><b class="num" data-n="2">0</b><small>ingenierías: Petróleo y Sistemas</small></div>
+    </div>
+  </div>
+  <div class="console" aria-label="Ejemplo de cómo trabajo con IA"><div class="bar"><i></i><i></i><i></i><span>dirigiendo-ia.sh</span></div><div class="body" id="con"></div></div>
+</div></section>
+
+<section class="s" id="demos"><div class="wrap">
+  <div class="sh rv"><div><div class="k">Demos en vivo · datos ficticios</div><h2>Software para la industria petrolera</h2><p>Dos plataformas completas, inspiradas en mi trabajo real con flotas y mantenimiento, rehechas desde cero con datos inventados. Ábrelas y úsalas: todo funciona en el navegador.</p></div></div>
+
+  <article class="demo rv" data-demo="trakon">
+    <div class="shots"><div class="shot" data-zoom><img src="assets/trakon-panel.jpg" alt="TRAKON, centro de control" loading="lazy"><span class="lbl">Centro de control</span></div><div class="thumbs"></div></div>
+    <div class="dtx"><span class="tag">Flota · GPS · Reportes</span><h3>TRAKON<small>Fleet Intelligence</small></h3>
+      <p>Rastreo GPS y gestión de flota: dónde está cada unidad, qué hizo en cada turno, quién la maneja y qué documentos tiene vigentes.</p>
+      <ul class="feat"><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Mapa en vivo con 26 unidades, geocercas y 36 pozos</li><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Alertas con avisos por Telegram y vigilancia nocturna</li><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Reportes de turno en Excel, PDF e imagen</li><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Fichas de vehículos y conductores con foto, documentos y QR</li><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>5 tableros tipo Power BI con filtros cruzados</li></ul>
+      <div class="roi"><svg class="i" viewBox="0 0 24 24"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg><span>Una flota de 20–30 unidades puede ahorrar <b>1.500–3.000 USD al mes</b> en ralentí, uso no autorizado y reportes manuales.</span></div>
+      <div class="chips"><span class="chip">JavaScript</span><span class="chip">Leaflet</span><span class="chip">Chart.js</span><span class="chip">SVG propios</span><span class="chip">Modo claro/oscuro</span></div>
+      <div class="ctas"><a class="btn pri" href="trakon/" target="_blank" rel="noopener">Abrir la demo</a></div></div>
+  </article>
+
+  <article class="demo rev rv" data-demo="navora">
+    <div class="shots"><div class="shot" data-zoom><img src="assets/navora-panel.jpg" alt="NAVORA, centro de operaciones" loading="lazy"><span class="lbl">Centro de operaciones</span></div><div class="thumbs"></div></div>
+    <div class="dtx"><span class="tag">Mantenimiento · Operaciones de campo</span><h3>NAVORA<small>Maintenance &amp; Operations</small></h3>
+      <p>Mantenimiento mecánico con trazabilidad completa y operaciones de campo: grúas, vacuum, balancines, generadores y su personal.</p>
+      <ul class="feat"><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Expedientes de 5 pasos: solicitud, cotización, recepción, OT y cierre</li><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Tablero Kanban de órdenes de trabajo (arrastrar y soltar)</li><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Acta de recepción con firmas, fotos y mapa de daños</li><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Plan del día con mensaje para WhatsApp y control de horas</li><li><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Tableros de MTBF, MTTR, disponibilidad y costos</li></ul>
+      <div class="roi"><svg class="i" viewBox="0 0 24 24"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg><span>Menos paradas no planificadas = <b>más horas facturables</b>, menos correctivos y auditorías sin sorpresas.</span></div>
+      <div class="chips"><span class="chip">JavaScript</span><span class="chip">Canvas (firmas)</span><span class="chip">Drag &amp; drop</span><span class="chip">Chart.js</span><span class="chip">Leaflet</span></div>
+      <div class="ctas"><a class="btn pri" href="navora/" target="_blank" rel="noopener">Abrir la demo</a></div></div>
+  </article>
+</div></section>
+
+<section class="s" id="proyectos"><div class="wrap">
+  <div class="sh rv"><div><div class="k">Más trabajo</div><h2>Otros proyectos</h2><p>Herramientas de datos, educación y productividad. Cada tarjeta dice con honestidad si ya está publicado o si lo estoy preparando.</p></div><div class="filters" id="filtros"><button class="fbtn on" data-f="todos">Todos</button><button class="fbtn" data-f="industria">Industria</button><button class="fbtn" data-f="datos">Datos</button><button class="fbtn" data-f="educacion">Educación</button><button class="fbtn" data-f="herramientas">Herramientas</button></div></div>
+  <div class="grid" id="pgrid"></div>
+</div></section>
+
+<section class="s" id="metodo"><div class="wrap">
+  <div class="sh rv"><div><div class="k">Método</div><h2>Cómo trabajo con IA</h2><p>No escribo el código a mano: dirijo a la IA como un líder técnico dirige a su equipo. Lo que aporto es el criterio, el conocimiento de la operación y la validación.</p></div></div>
+  <div class="flow rv">
+    <div class="step"><div class="n">01</div><h3>Entender</h3><p>Levanto el proceso real con quienes lo viven: qué deciden, qué datos usan y dónde se pierde tiempo.</p><span class="who yo">Yo</span></div>
+    <div class="step"><div class="n">02</div><h3>Diseñar</h3><p>Defino los módulos, los datos, las pantallas y las reglas. Escribo instrucciones precisas, por partes.</p><span class="who yo">Yo</span></div>
+    <div class="step"><div class="n">03</div><h3>Construir</h3><p>La IA (Claude) escribe el código siguiendo mis instrucciones y mis estándares de diseño.</p><span class="who ia">IA</span></div>
+    <div class="step"><div class="n">04</div><h3>Validar</h3><p>Pruebo cada función en escritorio y teléfono, en modo claro y oscuro, pido correcciones y ajusto hasta que funciona.</p><span class="who yo">Yo</span></div>
+  </div>
+  <div class="honest rv"><svg class="i" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><div><b>Transparencia:</b> todos los proyectos de esta página se construyeron dirigiendo IA. Las demos industriales están inspiradas en mi trabajo real, pero son desarrollos propios con datos 100 % ficticios: no contienen código, datos ni pantallas de ninguna empresa.</div></div>
+</div></section>
+
+<section class="s" id="experiencia"><div class="wrap">
+  <div class="sh rv"><div><div class="k">Trayectoria</div><h2>Experiencia</h2></div></div>
+  <div class="two">
+    <div class="tl rv">
+      <div class="ti now"><b>Analista de Tecnología y Tracker GPS</b><div class="meta">Fullpetro, C.A. · servicios petroleros · sept. 2026 – actualidad</div><p>Adscrito a Mantenimiento Mecánico en campo. Dirigí con IA la construcción de los módulos de rastreo GPS y flota de la plataforma corporativa, y automaticé los reportes por turno y las alertas por Telegram.</p></div>
+      <div class="ti"><b>Coordinador de Sistemas y Tecnología</b><div class="meta">Distribuidoras y Servicios Fuenmayor Pineda · mar. 2025 – mar. 2026</div><p>Enlace entre TI y las áreas administrativas, redes, servidores, respaldos, inventario y formación de usuarios.</p></div>
+      <div class="ti"><b>Apoyo Administrativo y Soporte Técnico</b><div class="meta">Consulado de Colombia en Maracaibo (vía SAP DM) · oct. 2023 – feb. 2025</div><p>Soporte a 18 usuarios, Microsoft 365, Active Directory y red LAN.</p></div>
+      <div class="ti"><b>Supervisor de Laboratorio</b><div class="meta">Carbozulia · sector minero · sept. 2021 – oct. 2023</div><p>Control de calidad del mineral bajo normas de seguridad, informes técnicos y personal a cargo.</p></div>
+      <div class="ti"><b>Analista de Sistemas y Tecnología</b><div class="meta">Carbozulia · ago. 2019 – may. 2021</div><p>Infraestructura, soporte y mantenimiento preventivo y correctivo.</p></div>
+      <div class="ti"><b>Pasante y tesista en Ingeniería de Yacimientos</b><div class="meta">PDVSA · ago. – dic. 2017</div><p>Identificación de reservas con datos sísmicos y registros de pozos; apoyo en completación.</p></div>
+    </div>
+    <div class="rv">
+      <div class="box"><h3><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Lo que domino</h3><div class="sk dom"><span>Dirección de IA para software</span><span>Ingeniería de prompts</span><span>Levantamiento de procesos</span><span>Gestión de flota y GPS</span><span>Reportes automáticos</span><span>Mantenimiento preventivo y correctivo</span><span>Soporte e infraestructura de TI</span><span>Redes LAN (CCNA)</span><span>Supervisión de personal</span><span>Informes técnicos</span></div></div>
+      <div class="box"><h3><svg class="i" viewBox="0 0 24 24"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg>En formación</h3><div class="sk form"><span>Python (pandas)</span><span>SQL</span><span>Power BI</span><span>Machine learning y agentes</span><span>Inglés</span></div></div>
+      <div class="box"><h3><svg class="i" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Educación</h3><div class="edu"><div><svg class="i" viewBox="0 0 24 24"><path d="M12 2.7s7 7.3 7 12.3a7 7 0 0 1-14 0c0-5 7-12.3 7-12.3z"/></svg><span><b>Ingeniero de Petróleo</b> · Universidad del Zulia (LUZ), 2021</span></div><div><svg class="i" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg><span><b>Ingeniero de Sistemas</b> · Universidad Dr. José Gregorio Hernández, 2020</span></div><div><svg class="i" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg><span><b>CCNA</b> · Cisco, 2018</span></div></div></div>
+      <div class="box"><h3><svg class="i" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg>Voluntariado</h3><p style="margin:0">Payaso humanitario en ECORISAS &amp; Payasos Humanitarios Maracaibo desde 2022: visitamos hospitales, ancianatos y comunidades vulnerables.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="s" id="contacto"><div class="wrap">
+  <div class="cta rv"><h2>¿Hablamos?</h2><p>Busco oportunidades en la industria petrolera y en roles de automatización e implementación de IA, remotos o en cualquier parte de Venezuela. Aprendo rápido y llevo cada proyecto hasta que funciona.</p><div class="ctas" style="margin-top:18px"><a class="btn pri" href="https://www.linkedin.com/in/miguellucho" target="_blank" rel="noopener">Escríbeme por LinkedIn</a><a class="btn" href="https://github.com/MIGUELLUCHO1111" target="_blank" rel="noopener">GitHub</a><a class="btn" href="#demos">Ver las demos</a></div></div>
+</div></section>
+</main>
+<footer><div class="wrap">© <span id="anio"></span> Luis Miguel Guerra · Todos los derechos reservados. Las demos y su código no son de uso libre. · Maracaibo, Venezuela · Este sitio también se construyó dirigiendo IA.</div></footer>
+<div class="lb" id="lb" hidden><img id="lbImg" alt="Captura ampliada"><button id="lbX" aria-label="Cerrar">✕</button></div>
+
+<script>
+const $ = (s, el = document) => el.querySelector(s), $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const IC = { sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>', moon: '<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/>', menu: '<path d="M3 6h18M3 12h18M3 18h18"/>', ext: '<path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>', code: '<path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/>' };
+const ic = (n) => `<svg class="i" viewBox="0 0 24 24">${IC[n]}</svg>`;
+$('#anio').textContent = new Date().getFullYear();
+// Tema claro / oscuro
+const setTema = (t) => { document.documentElement.dataset.theme = t; try { localStorage.setItem('tema', t); } catch (e) {} $('#tema').innerHTML = ic(t === 'light' ? 'moon' : 'sun'); };
+setTema(document.documentElement.dataset.theme);
+$('#tema').onclick = () => setTema(document.documentElement.dataset.theme === 'light' ? 'dark' : 'light');
+$('#menu').innerHTML = ic('menu');
+$('#menu').onclick = () => $('#links').classList.toggle('open');
+$$('#links a').forEach((a) => (a.onclick = () => $('#links').classList.remove('open')));
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+// Rol que va cambiando
+const ROLES = ['Flota y GPS', 'Mantenimiento', 'Automatización', 'Tableros de datos', 'Apps con IA'];
+let ri = 0; const rot = $('#rot');
+const escribir = (txt, cb) => { let k = 0; const t = setInterval(() => { rot.textContent = txt.slice(0, ++k); if (k >= txt.length) { clearInterval(t); cb && cb(); } }, 55); };
+const borrar = (cb) => { const t = setInterval(() => { rot.textContent = rot.textContent.slice(0, -1); if (!rot.textContent) { clearInterval(t); cb(); } }, 30); };
+if (!reduce) setInterval(() => borrar(() => { ri = (ri + 1) % ROLES.length; escribir(ROLES[ri]); }), 3200);
+// Consola: de la instrucción a la aplicación
+const GUION = [['who', '$ yo › ', 'Necesito ver en un mapa dónde está cada grúa, con alertas si pasa de 80 km/h y un reporte por turno que llegue solo a Telegram.'], ['ia', 'IA › ', 'Entendido. Propongo 4 módulos: mapa en vivo, alertas, reporte de turno y fichas. ¿Confirmo el diseño?'], ['who', '$ yo › ', 'Sí. Estilo industrial, modo claro y oscuro, y que funcione en el teléfono.'], ['prog', 'Construyendo módulos', ''], ['ok', '✔ ', 'Mapa en vivo · 26 unidades'], ['ok', '✔ ', 'Alertas · Telegram'], ['ok', '✔ ', 'Reporte de turno · Excel, PDF e imagen'], ['who', '$ yo › ', 'Probado en escritorio y teléfono. Corrige el desbordamiento en 390 px.'], ['ok', '✔ ', 'Corregido y validado. Listo para publicar.']];
+const con = $('#con');
+async function consola() {
+  const dormir = (ms) => new Promise((r) => setTimeout(r, ms));
+  while (true) {
+    con.innerHTML = '';
+    for (const [tipo, pre, txt] of GUION) {
+      const l = document.createElement('div'); con.appendChild(l);
+      if (tipo === 'prog') { l.innerHTML = `<span class="dim">${pre}…</span><div class="prog"><i></i></div>`; await dormir(200); l.querySelector('i').style.width = '100%'; await dormir(900); continue; }
+      l.innerHTML = `<span class="${tipo}">${pre}</span><span class="t"></span><span class="cur"></span>`;
+      const t = l.querySelector('.t');
+      if (reduce) t.textContent = txt; else for (let k = 0; k < txt.length; k += 2) { t.textContent = txt.slice(0, k + 2); await dormir(tipo === 'ok' ? 8 : 16); }
+      l.querySelector('.cur').remove(); await dormir(tipo === 'ok' ? 250 : 650);
+    }
+    if (reduce) return;
+    await dormir(4500);
+  }
+}
+consola();
+// Números que cuentan al aparecer
+const contar = (el) => { const to = +el.dataset.n, t0 = performance.now(); const p = (t) => { const k = Math.min(1, (t - t0) / 1100); el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))) + (el.dataset.n === '6' ? '+' : ''); if (k < 1) requestAnimationFrame(p); }; requestAnimationFrame(p); };
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); $$('[data-n]', e.target).forEach(contar); if (e.target.dataset.n) contar(e.target); io.unobserve(e.target); } }), { threshold: 0.15 });
+$$('.rv, .stats').forEach((el) => io.observe(el));
+// Galería de cada demo
+const SHOTS = { trakon: [['panel', 'Centro de control'], ['estado', 'Estado de la flota'], ['mapa', 'Mapa en vivo'], ['unidad', 'Ficha de vehículo'], ['fuera', 'Fuera de horario'], ['reportes', 'Tablero de combustible']], navora: [['panel', 'Centro de operaciones'], ['ot', 'Órdenes de trabajo'], ['om', 'Expediente'], ['recepcion', 'Recepción con firmas'], ['plandia', 'Plan del día'], ['reportes', 'Tablero de mantenimiento']] };
+$$('[data-demo]').forEach((d) => {
+  const k = d.dataset.demo, img = $('.shot img', d), lbl = $('.shot .lbl', d), th = $('.thumbs', d); let i = 0, timer;
+  th.innerHTML = SHOTS[k].map(([f, n], j) => `<button class="${j ? '' : 'on'}" data-j="${j}" aria-label="${n}"><img src="assets/${k}-${f}.jpg" alt="" loading="lazy"></button>`).join('');
+  const ver = (j) => { i = j; img.style.opacity = 0; setTimeout(() => { img.src = `assets/${k}-${SHOTS[k][j][0]}.jpg`; img.alt = `${k.toUpperCase()}, ${SHOTS[k][j][1]}`; lbl.textContent = SHOTS[k][j][1]; img.style.opacity = 1; }, 200); $$('button', th).forEach((b) => b.classList.toggle('on', +b.dataset.j === j)); };
+  th.onclick = (e) => { const b = e.target.closest('[data-j]'); if (b) { clearInterval(timer); ver(+b.dataset.j); } };
+  if (!reduce) timer = setInterval(() => ver((i + 1) % SHOTS[k].length), 3800);
+});
+$$('[data-zoom]').forEach((s) => (s.onclick = () => { $('#lbImg').src = $('img', s).src; $('#lb').hidden = false; }));
+$('#lb').onclick = (e) => { if (e.target.id !== 'lbImg') $('#lb').hidden = true; };
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') $('#lb').hidden = true; });
+// Proyectos
+const P = [
+  ['industria', 'pub', 'Petróleo de Noruega', 'Producción y valor de 125 campos con datos oficiales (Sodir): curvas de declinación de Arps, VPN según el precio del Brent y dashboard web interactivo.', ['Python', 'pandas', 'Chart.js'], 'M12 2.7s7 7.3 7 12.3a7 7 0 0 1-14 0c0-5 7-12.3 7-12.3z', [['Ver dashboard', 'https://miguellucho1111.github.io/portafolio-analista-datos/petroleo.html', 'ext']]],
+  ['industria', 'demo', 'TRAKON · Flota y GPS', 'Rastreo GPS, fichas de flota, alertas por Telegram, reportes de turno y tableros. Demo con datos ficticios.', ['JavaScript', 'Leaflet'], 'M12 2v4M12 18v4M2 12h4M18 12h4', [['Abrir', 'trakon/', 'ext']]],
+  ['industria', 'demo', 'NAVORA · Mantenimiento', 'Expedientes de mantenimiento, Kanban de órdenes, actas con firmas, plan del día y control de horas. Demo con datos ficticios.', ['JavaScript', 'Canvas'], 'M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z', [['Abrir', 'navora/', 'ext']]],
+  ['datos', 'pub', 'Portafolio de análisis de datos', 'Siete proyectos de práctica con datos reales: limpieza, SQL, visualización y tableros. Mi ruta de formación, en público.', ['Python', 'SQL', 'Power BI'], 'M3 3v18h18M7 16v-4M12 16V8M17 16v-7', [['Repositorio', 'https://github.com/MIGUELLUCHO1111/portafolio-analista-datos', 'code']]],
+  ['datos', 'pub', 'Laboratorio del analista de datos', 'Plataforma para practicar Python y SQL en el navegador (intérprete y base de datos reales), además de Excel y Power BI.', ['Skulpt', 'sql.js'], 'M9 3v6L4 18a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-9V3M8 3h8', [['Repositorio', 'https://github.com/MIGUELLUCHO1111/laboratorio-analista-datos', 'code']]],
+  ['datos', 'prox', 'Tablero de operaciones de pozos', 'Tablero de producción y operación de pozos al estilo Power BI, con indicadores y filtros.', ['Power BI', 'HTML'], 'M2 21h20M8 21l3-11 3 11M3 9l15-4M18 5v10', []],
+  ['educacion', 'prox', 'LEO · inglés profesional', 'Plataforma para aprender inglés de A1 a C1: nivelación, unidades, laboratorio de pronunciación, repaso espaciado y tutor con IA.', ['JavaScript', 'IA'], 'M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z', []],
+  ['educacion', 'prox', 'Plan de estudio de IA', 'Programa propio de 11 niveles para aprender IA aplicada (Python, datos, machine learning, agentes), con progreso y retos.', ['Python', 'Markdown'], 'M22 10 12 5 2 10l10 5 10-5zM6 12v5c3 3 9 3 12 0v-5', []],
+  ['herramientas', 'prox', 'Mi Quincena', 'App para manejar el dinero por quincena: sobres, deudas, metas y conversión bolívares/dólares. Funciona sin internet y se instala en el teléfono.', ['PWA', 'JavaScript'], 'M21 4H3v16h18zM16 12h.01M3 9h18', []],
+  ['herramientas', 'prox', 'Guía interactiva de Claude', 'Guía paso a paso para migrar proyectos y configuraciones entre cuentas de Claude, con verificación de cada paso.', ['HTML', 'JavaScript'], 'M9 18l6-6-6-6', []],
+  ['herramientas', 'priv', 'Sistema para consultorio odontológico', 'Historia clínica, agenda, odontograma, presupuestos, inventario y finanzas con firmas y PDF, para un cliente privado.', ['Python', 'FastAPI', 'SQLite'], 'M12 5.5C10 3 6 3 5 6s1 7 2 11c.5 2 2 2 2.5 0L11 13h2l1.5 4c.5 2 2 2 2.5 0 1-4 3-8 2-11s-5-3-7-.5z', []],
+];
+const EST = { pub: ['pub', 'Publicado'], demo: ['demo', 'Demo en vivo'], prox: ['prox', 'Publicación próxima'], priv: ['priv', 'Caso privado'] };
+$('#pgrid').innerHTML = P.map(([cat, est, t, d, tags, path, links]) => `<article class="card rv" data-cat="${cat}"><span class="st badge ${EST[est][0]}">${EST[est][1]}</span><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="${path}"/></svg></span><h3>${t}</h3><p>${d}</p><div class="chips" style="margin:0">${tags.map((x) => `<span class="chip">${x}</span>`).join('')}</div>${links.length ? `<div class="lk">${links.map(([n, u, i]) => `<a class="btn sm" href="${u}" target="_blank" rel="noopener">${ic(i)} ${n}</a>`).join('')}</div>` : ''}</article>`).join('');
+$$('#pgrid .rv').forEach((el) => io.observe(el));
+$('#filtros').onclick = (e) => { const b = e.target.closest('[data-f]'); if (!b) return; $$('#filtros .fbtn').forEach((x) => x.classList.toggle('on', x === b)); $$('#pgrid .card').forEach((c) => c.classList.toggle('hide', b.dataset.f !== 'todos' && c.dataset.cat !== b.dataset.f)); };
+// Resalta la sección visible en el menú
+const secs = $$('main section[id]');
+addEventListener('scroll', () => { const y = scrollY + 120; let on = ''; secs.forEach((s) => { if (s.offsetTop <= y) on = s.id; }); $$('#links a').forEach((a) => a.classList.toggle('on', a.getAttribute('href') === `#${on}`)); }, { passive: true });
+</script>
+</body>
+</html>
